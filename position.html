@@ -4,23 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS position</title>
+    <style>
+        .swim-container{
+            position: relative;
+            border: 2px solid;
+            width: 400px;
+        }
+        .box{
+            border: 2px dotted plum;
+            width: 200px;
+        }
+        .dummy{
+            border: 2px solid tomato;
+            width: 200px;
+            height: 200px;
+        }
+        .another-dummy{
+            border: 2px solid blue;
+        }
+        /* .ring{
+            position: relative;
+            left: 50px;
+            top: -50px;
+        } */
+
+        /* .ring{
+            position: absolute;
+            top: 50px;
+            left: 50px; 
+        } */
+
+        .ring{
+            position: sticky;
+            top: 0px;
+        }
+
+        /* .ring{
+            position: fixed;
+            top: 50px;
+        } */
+    </style>
 </head>
 <body>
     <h3>CSS position</h3>
     <ol>
-        <li>Static</li>
-        <li>Relative</li>
-        <li>Absolute</li>
-        <li>Fixed</li>
-        <li>Sticky</li>
+        <li><strong>Static:</strong> এটি default position.</li>
+        <li><strong>Relative:</strong> নিজের জায়গা ছাড়ে না অন্য element ফাঁকা জায়গা দখল করবে। কিন্তু আবার এটাকে নিজের কারেন্ট পজিশনের relative এ সরানো যায়। সেক্ষেত্রে নিজের জায়গা ফাঁকা রেখে সরবে।</li>
+        <li><strong>Absolute:</strong> <small>নিজের জায়গা হারাবে এবং parent এর পজিশন অনুযায়ী সরবে নড়বে। parent না থাকলে root এর পজিশন অনুযায়ী সরবে নড়বে।</li>
+        <li><strong>Sticky:</strong> position:sticky দিয়ে top,right,bottom,left value দিলে সেটা সেখানে স্থির হয়ে যাবে। মাউস স্ক্রল করলেও থেকে যাবে। তবে parent এর এরিয়া শেষ হয়ে গেলে বিদায় নেবে।
+        </li>
+        <li><strong>Fixed:</strong> sticky এর মতই তবে পার্থক্য শুধু parent এর উপর নির্ভর করবে না, parent শেষ হয়ে গেলেও থাকবে অর্থাৎ root এর সাপেক্ষে fixed হয়ে যাবে। </li>
     </ol>
     <div class="swim-container">
-        <div class="box-boy">
-            <img src="" alt=""></div>
-        <div class="box-ring">
-            <img src="" alt=""></div>
-        <div class="box-water">
-            <img src="" alt=""></div>
+        <div class="box boy">
+            <img src="images/boy.svg" alt=""></div>
+        <div class="box ring">
+            <img src="images/ring.svg" alt=""></div>
+        <div class="box water">
+            <img src="images/water.svg" alt=""></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+    </div>
+    <div class="another-dummy">
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
+        <div class="dummy"></div>
     </div>
 
 </body>
