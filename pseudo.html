@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pseudo</title>
+
+    <style>
+        h3{
+            color: peru;
+        }
+        h3:hover{
+            background-color: aqua;
+            color: brown;
+        }
+        input:focus{
+            background-color: rgb(229, 238, 241);
+            color: blue;
+            outline: 0;
+            border: 2px solid red;
+        }
+        a:visited{
+            color: grey;
+        }
+        /* li:last-child{
+            color: red;
+        } */
+        /* li:first-child{
+            color: blue;
+        } */
+
+        li:nth-child(2n+1){
+            color: blueviolet;
+        }
+        li:nth-last-child(2){
+            color: tomato;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h3>My Heading</h3>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+    <a href="https://www.google.com/" target="_blank">Google</a>
+    <a href="https://github.com/mashuk-tamim" target="_blank">My github repositories</a>
+    <a href="https://www.visitsaudi.com/en/see-do/destinations/makkah-province" target="_blank">Visit Makkah</a>
+
+    <ul>
+        <li>Alia</li>
+        <li>Dalia</li>
+        <li>Balia</li>
+        <li>Kalia</li>
+        <li>Malia</li>
+        <li>Palaiya</li>
+        <li>Jalaiya</li>
+    </ul>
 </body>
 </html>
